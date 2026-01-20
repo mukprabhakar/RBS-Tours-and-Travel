@@ -1,15 +1,15 @@
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "Packages", href: "#packages" },
-    { name: "Destinations", href: "#destinations" },
-    { name: "About Us", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "Packages", href: "/packages" },
+    { name: "About Us", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const destinations = [
@@ -35,7 +35,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="bg-foreground text-primary-foreground">
+    <footer className="bg-foreground text-primary-foreground">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -76,12 +76,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-primary-foreground/80 hover:text-accent transition-colors duration-300"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -93,12 +93,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {destinations.map((dest) => (
                 <li key={dest}>
-                  <a
-                    href="#packages"
+                  <Link
+                    to="/packages"
                     className="text-primary-foreground/80 hover:text-accent transition-colors duration-300"
                   >
                     {dest}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

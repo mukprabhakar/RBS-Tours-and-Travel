@@ -8,6 +8,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -89,13 +90,13 @@ const Services = () => {
               </p>
 
               {/* Link */}
-              <a
-                href="#packages"
+              <Link
+                to="/packages"
                 className="inline-flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all duration-300"
               >
                 Learn More
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           ))}
         </div>

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Clock, MapPin, Star, Users, Check } from "lucide-react";
+import { Link } from "react-router-dom";
 import keralaImage from "@/assets/kerala-backwaters.jpg";
 import himalayasImage from "@/assets/himalayas.jpg";
 import goaImage from "@/assets/goa-beach.jpg";
