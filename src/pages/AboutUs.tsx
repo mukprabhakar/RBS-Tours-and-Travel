@@ -12,7 +12,7 @@ const AboutUs = () => {
         <section className="pt-32 pb-20 bg-gradient-to-br from-primary/5 to-secondary/5">
           <div className="container mx-auto px-4 text-center">
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              About <span className="gradient-text">Bharat Travels</span>
+              About <span className="gradient-text">RBS TOURS AND TRAVELS</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Your trusted travel partner for exploring the diverse beauty of India since 2010. 
@@ -30,7 +30,7 @@ const AboutUs = () => {
                   Our Journey Since 2010
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Founded with a passion for showcasing the incredible diversity of India, Bharat Travels has been 
+                  Founded with a passion for showcasing the incredible diversity of India, RBS TOURS AND TRAVELS has been 
                   connecting travelers with authentic Indian experiences for over a decade. What started as a small 
                   travel agency has grown into one of India's premier tour operators.
                 </p>
@@ -256,7 +256,7 @@ const AboutUs = () => {
                 Ready to Explore India with Us?
               </h2>
               <p className="text-lg mb-8 opacity-90">
-                Join thousands of satisfied travelers who have discovered the magic of India with Bharat Travels.
+                Join thousands of satisfied travelers who have discovered the magic of India with RBS TOURS AND TRAVELS.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-card text-primary font-semibold rounded-xl hover:bg-card/90 transition-colors">

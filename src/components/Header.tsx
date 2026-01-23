@@ -22,11 +22,11 @@ const Header = () => {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              <span>+91 98765 43210</span>
+              <span>93107 00129</span>
             </div>
             <div className="hidden sm:flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              <span>Pan India Travel Services</span>
+              <span>sector 1 jalpura g noida</span>
             </div>
           </div>
           <div className="hidden md:block">
@@ -44,8 +44,8 @@ const Header = () => {
               <span className="text-primary-foreground font-display text-xl font-bold">BT</span>
             </div>
             <div>
-              <h1 className="font-display text-xl font-bold text-foreground">Bharat Travels</h1>
-              <p className="text-xs text-muted-foreground">Discover Incredible India</p>
+              <h1 className="font-display text-xl font-bold text-foreground">RBS TOURS AND TRAVELS</h1>
+              <p className="text-xs text-muted-foreground">krishnakant bhardwaj</p>
             </div>
           </Link>
 

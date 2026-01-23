@@ -12,7 +12,7 @@ const Contact = () => {
         <section className="pt-32 pb-20 bg-gradient-to-br from-primary/5 to-secondary/5">
           <div className="container mx-auto px-4 text-center">
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Contact <span className="gradient-text">Bharat Travels</span>
+              Contact <span className="gradient-text">RBS TOURS AND TRAVELS</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Reach out to our travel experts for inquiries, bookings, or assistance with your travel plans. 
@@ -38,7 +38,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground text-lg mb-1">Phone Number</h3>
-                      <p className="text-muted-foreground">+91 98765 43210</p>
+                      <p className="text-muted-foreground">93107 00129</p>
                       <p className="text-muted-foreground text-sm">Mon-Fri: 9:00 AM - 7:00 PM</p>
                     </div>
                   </div>
@@ -60,8 +60,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground text-lg mb-1">Office Address</h3>
-                      <p className="text-muted-foreground">123 Travel Plaza, Connaught Place</p>
-                      <p className="text-muted-foreground">New Delhi - 110001, India</p>
+                      <p className="text-muted-foreground">sector 1 jalpura g noida</p>
                     </div>
                   </div>
                   
