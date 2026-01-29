@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, MapPin } from "lucide-react";
+import logoImage from "@/assets/rbs_logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +42,11 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <div className="w-12 h-12 gradient-hero rounded-xl flex items-center justify-center shadow-card">
-              <span className="text-primary-foreground font-display text-xl font-bold">BT</span>
+              <img 
+                src={logoImage} 
+                alt="RBS Tours and Travels Logo" 
+                className="w-8 h-8 object-contain"
+              />
             </div>
             <div>
               <h1 className="font-display text-xl font-bold text-foreground">RBS TOURS AND TRAVELS</h1>

@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
+import logoImage from "@/assets/rbs_logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -43,7 +44,11 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 gradient-hero rounded-xl flex items-center justify-center">
-                <span className="text-primary-foreground font-display text-xl font-bold">BT</span>
+                <img 
+                  src={logoImage} 
+                  alt="RBS Tours and Travels Logo" 
+                  className="w-8 h-8 object-contain"
+                />
               </div>
               <div>
                 <h3 className="font-display text-xl font-bold">RBS TOURS AND TRAVELS</h3>

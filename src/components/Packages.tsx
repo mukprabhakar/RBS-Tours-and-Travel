@@ -14,8 +14,6 @@ const packages = [
     destination: "Kerala",
     region: "South India",
     duration: "5 Days / 4 Nights",
-    price: "₹24,999",
-    originalPrice: "₹32,000",
     rating: 4.9,
     reviews: 234,
     image: keralaImage,
@@ -29,8 +27,6 @@ const packages = [
     destination: "Himachal Pradesh",
     region: "North India",
     duration: "7 Days / 6 Nights",
-    price: "₹35,999",
-    originalPrice: "₹45,000",
     rating: 4.8,
     reviews: 189,
     image: himalayasImage,
@@ -44,8 +40,6 @@ const packages = [
     destination: "Goa",
     region: "West India",
     duration: "4 Days / 3 Nights",
-    price: "₹18,999",
-    originalPrice: "₹24,000",
     rating: 4.7,
     reviews: 312,
     image: goaImage,
@@ -59,8 +53,6 @@ const packages = [
     destination: "Jaipur - Udaipur",
     region: "West India",
     duration: "6 Days / 5 Nights",
-    price: "₹42,999",
-    originalPrice: "₹55,000",
     rating: 4.9,
     reviews: 276,
     image: jaipurImage,
@@ -74,8 +66,6 @@ const packages = [
     destination: "Varanasi",
     region: "North India",
     duration: "3 Days / 2 Nights",
-    price: "₹15,999",
-    originalPrice: "₹20,000",
     rating: 4.8,
     reviews: 198,
     image: varanasiImage,
@@ -100,7 +90,7 @@ const Packages = () => {
           </h2>
           <p className="text-muted-foreground text-lg">
             Handpicked travel packages covering all corners of India. 
-            Best prices, best experiences, unforgettable memories.
+            Best experiences, unforgettable memories.
           </p>
         </div>
 
@@ -196,13 +186,8 @@ const Packages = () => {
                   )}
                 </div>
 
-                {/* Price & CTA */}
-                <div className="flex items-center justify-between pt-4 border-t border-border">
-                  <div>
-                    <div className="text-muted-foreground text-sm line-through">{pkg.originalPrice}</div>
-                    <div className="text-2xl font-display font-bold text-primary">{pkg.price}</div>
-                    <div className="text-xs text-muted-foreground">per person</div>
-                  </div>
+                {/* CTA */}
+                <div className="flex items-center justify-end pt-4 border-t border-border">
                   <Button variant="hero" size="default">
                     Book Now
                   </Button>

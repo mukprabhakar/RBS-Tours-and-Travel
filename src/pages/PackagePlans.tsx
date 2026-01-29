@@ -13,8 +13,6 @@ const packageCategories = [
         destination: "Srinagar - Gulmarg - Pahalgam",
         region: "North India",
         duration: "7 Days / 6 Nights",
-        price: "₹49,999",
-        originalPrice: "₹65,000",
         rating: 4.9,
         reviews: 156,
         image: "https://images.unsplash.com/photo-1542662565-7e4e66d9d8f9?auto=format&fit=crop&w=800&q=80",
@@ -28,8 +26,6 @@ const packageCategories = [
         destination: "Jaipur - Udaipur - Jodhpur",
         region: "West India",
         duration: "8 Days / 7 Nights",
-        price: "₹55,999",
-        originalPrice: "₹72,000",
         rating: 4.8,
         reviews: 203,
         image: "https://images.unsplash.com/photo-1599447083348-7ec9b9aa3c2d?auto=format&fit=crop&w=800&q=80",
@@ -43,8 +39,6 @@ const packageCategories = [
         destination: "Alleppey - Kumarakom - Cochin",
         region: "South India",
         duration: "6 Days / 5 Nights",
-        price: "₹39,999",
-        originalPrice: "₹50,000",
         rating: 4.7,
         reviews: 189,
         image: "https://images.unsplash.com/photo-1577099211930-996d286e2b05?auto=format&fit=crop&w=800&q=80",
@@ -64,8 +58,6 @@ const packageCategories = [
         destination: "Manali - Shimla - Dalhousie",
         region: "North India",
         duration: "6 Days / 5 Nights",
-        price: "₹42,999",
-        originalPrice: "₹55,000",
         rating: 4.6,
         reviews: 234,
         image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
@@ -79,8 +71,6 @@ const packageCategories = [
         destination: "North Goa - South Goa",
         region: "West India",
         duration: "5 Days / 4 Nights",
-        price: "₹35,999",
-        originalPrice: "₹45,000",
         rating: 4.5,
         reviews: 312,
         image: "https://images.unsplash.com/photo-1537348324571-91e6c0a2f5e7?auto=format&fit=crop&w=800&q=80",
@@ -100,8 +90,6 @@ const packageCategories = [
         destination: "Rohtang Pass - Spiti Valley",
         region: "North India",
         duration: "10 Days / 9 Nights",
-        price: "₹65,999",
-        originalPrice: "₹80,000",
         rating: 4.9,
         reviews: 145,
         image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
@@ -115,8 +103,6 @@ const packageCategories = [
         destination: "Bandipur - Nagarhole - Mysore",
         region: "South India",
         duration: "5 Days / 4 Nights",
-        price: "₹28,999",
-        originalPrice: "₹35,000",
         rating: 4.7,
         reviews: 198,
         image: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=800&q=80",
@@ -143,7 +129,7 @@ const PackagePlans = () => {
               Curated Travel <span className="gradient-text">Packages</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Handpicked travel packages covering all corners of India. Best prices, best experiences, unforgettable memories.
+              Handpicked travel packages covering all corners of India. Best experiences, unforgettable memories.
             </p>
           </div>
         </section>
@@ -258,16 +244,8 @@ const PackagePlans = () => {
                       )}
                     </div>
 
-                    {/* Price & CTA */}
-                    <div className="flex items-center justify-between pt-4 border-t border-border">
-                      <div>
-                        <div className="text-muted-foreground text-sm line-through">{pkg.originalPrice}</div>
-                        <div className="text-2xl font-display font-bold text-primary flex items-center gap-1">
-                          <IndianRupee className="w-5 h-5" />
-                          {pkg.price.replace('₹', '')}
-                        </div>
-                        <div className="text-xs text-muted-foreground">per person</div>
-                      </div>
+                    {/* CTA */}
+                    <div className="flex items-center justify-end pt-4 border-t border-border">
                       <button className="px-6 py-2 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors">
                         Book Now
                       </button>
@@ -315,7 +293,6 @@ const PackagePlans = () => {
                           <p className="text-sm text-muted-foreground">{pkg.destination}</p>
                         </div>
                         <div className="text-right">
-                          <div className="font-bold text-primary">{pkg.price}</div>
                           <div className="text-xs text-muted-foreground">{pkg.duration}</div>
                         </div>
                       </div>

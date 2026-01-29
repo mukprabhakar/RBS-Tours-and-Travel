@@ -134,7 +134,7 @@ const AboutUs = () => {
                 {
                   icon: IndianRupee,
                   title: "Value for Money",
-                  description: "Offering competitive prices without compromising on quality"
+                  description: "Offering excellent value without compromising on quality"
                 }
               ].map((value, index) => (
                 <div 

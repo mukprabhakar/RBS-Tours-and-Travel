@@ -18,8 +18,8 @@ const features = [
   },
   {
     icon: Award,
-    title: "Best Price Guarantee",
-    description: "We offer the best prices with our price match promise and no hidden charges.",
+    title: "Best Value Guarantee",
+    description: "We offer great value with no hidden charges.",
   },
   {
     icon: CreditCard,

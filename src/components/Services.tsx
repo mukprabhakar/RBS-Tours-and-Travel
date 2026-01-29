@@ -38,7 +38,7 @@ const services = [
   {
     icon: Hotel,
     title: "Hotel Bookings",
-    description: "Access to 10,000+ verified hotels ranging from budget stays to luxury resorts at the best prices.",
+    description: "Access to 10,000+ verified hotels ranging from budget stays to luxury resorts.",
     color: "gradient-hero",
   },
   {
