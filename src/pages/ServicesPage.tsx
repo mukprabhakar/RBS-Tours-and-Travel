@@ -14,6 +14,7 @@ import {
   Waves,
   Landmark
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const serviceCategories = [
   {
@@ -225,12 +226,16 @@ const ServicesPage = () => {
                 Contact us today to discuss your travel needs and let us create an unforgettable journey for you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-card text-primary font-semibold rounded-xl hover:bg-card/90 transition-colors">
-                  Contact Us
-                </button>
-                <button className="px-8 py-4 bg-primary-foreground/10 text-primary-foreground font-semibold rounded-xl hover:bg-primary-foreground/20 transition-colors">
-                  Browse Packages
-                </button>
+                <Link to="/contact">
+                  <button className="px-8 py-4 bg-card text-primary font-semibold rounded-xl hover:bg-card/90 transition-colors">
+                    Contact Us
+                  </button>
+                </Link>
+                <Link to="/packages">
+                  <button className="px-8 py-4 bg-primary-foreground/10 text-primary-foreground font-semibold rounded-xl hover:bg-primary-foreground/20 transition-colors">
+                    Browse Packages
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

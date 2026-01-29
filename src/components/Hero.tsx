@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Users } from "lucide-react";
 import heroImage from "@/assets/hero-taj-mahal.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -40,9 +41,11 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 mb-12 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            <Button variant="hero" size="xl">
-              Explore Packages
-            </Button>
+            <Link to="/packages">
+              <Button variant="hero" size="xl">
+                Explore Pakages
+              </Button>
+            </Link>
           </div>
 
           {/* Quick Stats */}
