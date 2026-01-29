@@ -66,38 +66,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Search Box - Floating */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-full max-w-4xl px-4 z-20 hidden md:block">
-        <div className="bg-card rounded-2xl shadow-elevated p-6 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="flex items-center gap-3 p-3 bg-muted rounded-xl">
-              <MapPin className="w-5 h-5 text-primary" />
-              <div>
-                <div className="text-xs text-muted-foreground">Destination</div>
-                <div className="font-medium text-foreground">Where to?</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 p-3 bg-muted rounded-xl">
-              <Calendar className="w-5 h-5 text-primary" />
-              <div>
-                <div className="text-xs text-muted-foreground">Travel Date</div>
-                <div className="font-medium text-foreground">Select dates</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 p-3 bg-muted rounded-xl">
-              <Users className="w-5 h-5 text-primary" />
-              <div>
-                <div className="text-xs text-muted-foreground">Travelers</div>
-                <div className="font-medium text-foreground">2 Adults</div>
-              </div>
-            </div>
-            <Button variant="hero" size="lg" className="h-full">
-              Search Tours
-            </Button>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
