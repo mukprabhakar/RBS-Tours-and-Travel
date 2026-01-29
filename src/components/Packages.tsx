@@ -188,9 +188,11 @@ const Packages = () => {
 
                 {/* CTA */}
                 <div className="flex items-center justify-end pt-4 border-t border-border">
-                  <Button variant="hero" size="default">
-                    Book Now
-                  </Button>
+                  <Link to="/contact">
+                    <Button variant="hero" size="default">
+                      Book Now
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -199,9 +201,11 @@ const Packages = () => {
 
         {/* View All CTA */}
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-            View All Packages
-          </Button>
+          <Link to="/packages">
+            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              View All Packages
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

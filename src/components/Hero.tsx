@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Play, MapPin, Calendar, Users } from "lucide-react";
+import { MapPin, Calendar, Users } from "lucide-react";
 import heroImage from "@/assets/hero-taj-mahal.jpg";
 
 const Hero = () => {
@@ -42,10 +42,6 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4 mb-12 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             <Button variant="hero" size="xl">
               Explore Packages
-            </Button>
-            <Button variant="heroOutline" size="xl" className="gap-2">
-              <Play className="w-5 h-5" />
-              Watch Video
             </Button>
           </div>
 

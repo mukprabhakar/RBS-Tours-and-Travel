@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Clock, MapPin, Star, Users, Check, IndianRupee } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const packageCategories = [
   {
@@ -246,9 +247,11 @@ const PackagePlans = () => {
 
                     {/* CTA */}
                     <div className="flex items-center justify-end pt-4 border-t border-border">
-                      <button className="px-6 py-2 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors">
-                        Book Now
-                      </button>
+                      <Link to="/contact">
+                        <button className="px-6 py-2 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors">
+                          Book Now
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -257,9 +260,11 @@ const PackagePlans = () => {
 
             {/* Load More Button */}
             <div className="text-center mt-12">
-              <button className="px-8 py-3 border border-primary text-primary rounded-xl hover:bg-primary hover:text-primary-foreground transition-colors">
-                View More Packages
-              </button>
+              <Link to="/packages">
+                <button className="px-8 py-3 border border-primary text-primary rounded-xl hover:bg-primary hover:text-primary-foreground transition-colors">
+                  View More Packages
+                </button>
+              </Link>
             </div>
           </div>
         </section>
@@ -298,9 +303,11 @@ const PackagePlans = () => {
                       </div>
                     ))}
                   </div>
-                  <button className="w-full mt-6 py-3 border border-primary text-primary rounded-xl hover:bg-primary hover:text-primary-foreground transition-colors">
-                    View All {category.name} Packages
-                  </button>
+                  <Link to="/packages">
+                    <button className="w-full mt-6 py-3 border border-primary text-primary rounded-xl hover:bg-primary hover:text-primary-foreground transition-colors">
+                      View All {category.name} Packages
+                    </button>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -318,12 +325,16 @@ const PackagePlans = () => {
                 Let us customize a package just for you. Tell us your preferences and we'll create an itinerary that matches your needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-card text-primary font-semibold rounded-xl hover:bg-card/90 transition-colors">
-                  Request Custom Package
-                </button>
-                <button className="px-8 py-4 bg-primary-foreground/10 text-primary-foreground font-semibold rounded-xl hover:bg-primary-foreground/20 transition-colors">
-                  Talk to Expert
-                </button>
+                <Link to="/contact">
+                  <button className="px-8 py-4 bg-card text-primary font-semibold rounded-xl hover:bg-card/90 transition-colors">
+                    Request Custom Package
+                  </button>
+                </Link>
+                <Link to="/contact">
+                  <button className="px-8 py-4 bg-primary-foreground/10 text-primary-foreground font-semibold rounded-xl hover:bg-primary-foreground/20 transition-colors">
+                    Talk to Expert
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
