@@ -156,69 +156,8 @@ const AboutUs = () => {
           </div>
         </section>
 
-        {/* Team */}
-        <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Meet Our Leadership Team
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Experienced professionals passionate about Indian tourism
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  name: "Rajesh Sharma",
-                  role: "Founder & CEO",
-                  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
-                  bio: "20+ years in travel industry, passionate about promoting Indian tourism globally."
-                },
-                {
-                  name: "Priya Patel",
-                  role: "Chief Operations Officer",
-                  image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
-                  bio: "Operations expert focused on delivering seamless travel experiences."
-                },
-                {
-                  name: "Amit Kumar",
-                  role: "Director of Experiences",
-                  image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
-                  bio: "Curates unique travel experiences across India's diverse destinations."
-                },
-                {
-                  name: "Sunita Devi",
-                  role: "Head of Customer Relations",
-                  image: "https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?auto=format&fit=crop&w=200&q=80",
-                  bio: "Ensures every customer receives personalized attention and care."
-                }
-              ].map((member, index) => (
-                <div 
-                  key={index}
-                  className="bg-card rounded-2xl overflow-hidden shadow-soft text-center"
-                >
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="p-6">
-                    <h3 className="font-display text-lg font-bold text-foreground">{member.name}</h3>
-                    <p className="text-primary font-medium mb-3">{member.role}</p>
-                    <p className="text-muted-foreground text-sm">
-                      {member.bio}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Achievements */}
-        <section className="py-20">
+        <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
