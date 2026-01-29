@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle, User, MessageSquare } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, MessageCircle, User, MessageSquare, Instagram } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -49,8 +49,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground text-lg mb-1">Email Address</h3>
-                      <p className="text-muted-foreground">info@bharattravels.com</p>
-                      <p className="text-muted-foreground text-sm">Support: support@bharattravels.com</p>
+                      <p className="text-muted-foreground">rbsharma0064@gmail.com</p>
                     </div>
                   </div>
                   
@@ -80,15 +79,14 @@ const Contact = () => {
                 <div className="mt-12">
                   <h3 className="font-semibold text-foreground text-lg mb-4">Follow Us</h3>
                   <div className="flex gap-4">
-                    {['Facebook', 'Instagram', 'Twitter', 'LinkedIn'].map((social) => (
-                      <a 
-                        key={social}
-                        href="#"
-                        className="w-12 h-12 bg-muted rounded-xl flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                      >
-                        {social.charAt(0)}
-                      </a>
-                    ))}
+                    <a 
+                      href="https://www.instagram.com/rbs0064?igsh=M24xbTRtdG1pOHRx" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 bg-muted rounded-xl flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                    >
+                      <Instagram className="w-6 h-6" />
+                    </a>
                   </div>
                 </div>
               </div>

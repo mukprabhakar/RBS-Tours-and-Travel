@@ -40,11 +40,11 @@ const CTA = () => {
           <div className="flex flex-wrap justify-center gap-8 text-primary-foreground">
             <div className="flex items-center gap-2">
               <Phone className="w-5 h-5" />
-              <span className="font-medium">+91 98765 43210</span>
+              <span className="font-medium">93107 00129</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5" />
-              <span className="font-medium">info@bharattravels.com</span>
+              <span className="font-medium">rbsharma0064@gmail.com</span>
             </div>
           </div>
         </div>
