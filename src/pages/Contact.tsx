@@ -2,8 +2,40 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Phone, Mail, MapPin, Clock, Send, MessageCircle, User, MessageSquare, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      const formData = new FormData(e.currentTarget);
+      const response = await fetch('https://formspree.io/f/xnjbppab', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        setSubmitSuccess(true);
+        // Reset form
+        e.currentTarget.reset();
+        // Hide success message after 5 seconds
+        setTimeout(() => setSubmitSuccess(false), 5000);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -98,7 +130,13 @@ const Contact = () => {
                   Send us a Message
                 </h3>
                 
-                <form className="space-y-6">
+                {submitSuccess && (
+                  <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 rounded-xl text-green-600">
+                    <p className="font-medium">Message sent successfully! We'll get back to you soon.</p>
+                  </div>
+                )}
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
@@ -109,6 +147,8 @@ const Contact = () => {
                         <input
                           type="text"
                           id="firstName"
+                          name="firstName"
+                          required
                           className="w-full pl-10 pr-4 py-3 bg-muted border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                           placeholder="Enter your first name"
                         />
@@ -124,6 +164,8 @@ const Contact = () => {
                         <input
                           type="text"
                           id="lastName"
+                          name="lastName"
+                          required
                           className="w-full pl-10 pr-4 py-3 bg-muted border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                           placeholder="Enter your last name"
                         />
@@ -140,6 +182,8 @@ const Contact = () => {
                       <input
                         type="email"
                         id="email"
+                        name="email"
+                        required
                         className="w-full pl-10 pr-4 py-3 bg-muted border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                         placeholder="Enter your email address"
                       />
@@ -155,6 +199,7 @@ const Contact = () => {
                       <input
                         type="tel"
                         id="phone"
+                        name="phone"
                         className="w-full pl-10 pr-4 py-3 bg-muted border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                         placeholder="Enter your phone number"
                       />
@@ -167,6 +212,7 @@ const Contact = () => {
                     </label>
                     <select
                       id="subject"
+                      name="subject"
                       className="w-full px-4 py-3 bg-muted border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                     >
                       <option value="">Select a subject</option>
@@ -186,7 +232,9 @@ const Contact = () => {
                       <MessageSquare className="absolute left-3 top-4 w-5 h-5 text-muted-foreground" />
                       <textarea
                         id="message"
+                        name="message"
                         rows={5}
+                        required
                         className="w-full pl-10 pr-4 py-3 bg-muted border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none"
                         placeholder="Tell us about your travel plans or inquiry..."
                       ></textarea>
@@ -195,10 +243,20 @@ const Contact = () => {
                   
                   <button
                     type="submit"
-                    className="w-full bg-primary text-primary-foreground py-4 rounded-xl font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+                    disabled={isSubmitting}
+                    className="w-full bg-primary text-primary-foreground py-4 rounded-xl font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <Send className="w-5 h-5" />
-                    Send Message
+                    {isSubmitting ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5" />
+                        Send Message
+                      </>
+                    )}
                   </button>
                 </form>
               </div>
