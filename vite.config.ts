@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/india-explorer-hub/' : '/',
+  base: mode === 'production' ? '/RBS-Tours-and-Travel/' : '/',
   server: {
     host: "::",
     port: 8080,
