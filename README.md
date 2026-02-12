@@ -54,6 +54,7 @@ This project is built with modern web technologies:
 - **Routing**: React Router DOM
 - **Icons**: Lucide React
 - **Testing**: Vitest
+- **Form Handling**: Formspree.io integration
 
 ## Getting Started
 
@@ -118,20 +119,55 @@ src/
 └── App.tsx             # Main application component
 ```
 
-## Deployment
+## Deployment to GitHub Pages
 
-### Production Build
+### Prerequisites
+1. Repository must be on GitHub
+2. Repository name should match the base path in `vite.config.ts` (currently `india-explorer-hub`)
+
+### Setup Instructions
+
+#### 1. Enable GitHub Pages
+1. Go to your repository on GitHub
+2. Click **Settings** tab
+3. In the left sidebar, click **Pages**
+4. Under "Build and deployment":
+   - Source: Select **GitHub Actions**
+   - Save the configuration
+
+#### 2. Push Your Code
 ```bash
-npm run build
+# Add all files
+git add .
+
+# Commit changes
+git commit -m "Configure for GitHub Pages deployment"
+
+# Push to main branch
+git push origin main
 ```
 
-The build output will be in the `dist/` folder, ready for deployment to any static hosting service.
+#### 3. Monitor Deployment
+1. Go to the **Actions** tab in your repository
+2. Watch the deployment workflow run
+3. Once successful, your site will be available at:
+   `https://[your-username].github.io/india-explorer-hub/`
 
-### Hosting Options
-- **Vercel**: Direct deployment from GitHub
-- **Netlify**: Drag and drop dist folder
-- **GitHub Pages**: Configure workflow for automatic deployment
-- **Traditional Hosting**: Upload dist folder contents
+### Alternative Deployment Methods
+
+#### Manual Deployment Script
+```bash
+# Windows
+deploy.bat
+
+# Linux/Mac
+./deploy.sh
+```
+
+#### Using gh-pages package
+```bash
+npm run deploy
+```
 
 ## Customization
 
@@ -151,6 +187,25 @@ Modify the following files to update business details:
 - Global styles: `src/index.css`
 - Component styles: Tailwind classes in component files
 - Custom theme: `tailwind.config.ts`
+
+## Troubleshooting
+
+### Common Issues
+
+**Build Failures:**
+- Check for CSS @import placement (must be at the top of files)
+- Verify all dependencies are installed: `npm install`
+- Clear cache if needed: `npm cache clean --force`
+
+**Deployment Issues:**
+- Ensure GitHub Pages is enabled in repository settings
+- Verify the workflow file is in `.github/workflows/deploy.yml`
+- Check that the repository name matches the base path in `vite.config.ts`
+
+**Form Submission Issues:**
+- Verify Formspree endpoint is correct
+- Check browser console for network errors
+- Ensure all required form fields have proper `name` attributes
 
 ## Contributing
 
